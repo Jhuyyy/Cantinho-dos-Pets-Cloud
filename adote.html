@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Adote um Pet - Cantinho dos Pets</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="logo">Cantinho dos Pets 🐾</div>
+    <nav>
+      <a href="/">Início</a>
+      <a href="sobre.html">Sobre Nós</a>
+      <a href="adote.html">Adote</a>
+      <a href="cadastro.html">Cadastre um Animal</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
+
+  <section class="filter-bar">
+    <select id="filtro-tipo">
+      <option value="">Todos os tipos</option>
+      <option value="cachorro">Cachorro</option>
+      <option value="gato">Gato</option>
+      <option value="outros">Outros</option>
+    </select>
+    <select id="filtro-porte">
+      <option value="">Todos os portes</option>
+      <option value="pequeno">Pequeno</option>
+      <option value="medio">Médio</option>
+      <option value="grande">Grande</option>
+    </select>
+  </section>
+
+  <section class="animals-list">
+    <h2>Animais disponíveis para adoção</h2>
+    <div class="cards" id="animais-lista">
+      <!-- Carregado via JS -->
+    </div>
+  </section>
+
+  <!-- Modal de Interesse -->
+  <div id="modal-interesse" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Tenho Interesse em Adotar!</h3>
+      <form id="form-interesse">
+        <input type="text" name="nome" placeholder="Seu nome completo" required>
+        <input type="email" name="email" placeholder="Seu e-mail" required>
+        <input type="tel" name="telefone" placeholder="Seu telefone (opcional)">
+        <textarea name="mensagem" placeholder="Por que você quer adotar este animal?"></textarea>
+        <input type="hidden" name="animal_id" id="animal-id">
+        <button type="submit">Enviar Interesse</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Cantinho dos Pets. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>

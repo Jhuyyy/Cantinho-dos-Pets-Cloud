@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastrar Animal - Cantinho dos Pets</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="logo">Cantinho dos Pets 🐾</div>
+    <nav>
+      <a href="/">Início</a>
+      <a href="sobre.html">Sobre Nós</a>
+      <a href="adote.html">Adote</a>
+      <a href="cadastro.html">Cadastre um Animal</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
+
+  <section class="cadastro-section">
+    <h2>Cadastrar Novo Animal (Acesso restrito a ONGs)</h2>
+    <p>Para cadastrar, use a <strong>API Key padrão</strong>: <code>apikey123</code></p>
+    
+    <form id="form-cadastro">
+      <input type="text" name="nome" placeholder="Nome do animal" required>
+      <select name="tipo" required>
+        <option value="">Tipo</option>
+        <option value="cachorro">Cachorro</option>
+        <option value="gato">Gato</option>
+        <option value="outros">Outros</option>
+      </select>
+      <input type="text" name="raca" placeholder="Raça">
+      <input type="number" name="idade" placeholder="Idade em meses">
+      <select name="sexo" required>
+        <option value="">Sexo</option>
+        <option value="macho">Macho</option>
+        <option value="femea">Fêmea</option>
+      </select>
+      <select name="porte" required>
+        <option value="">Porte</option>
+        <option value="pequeno">Pequeno</option>
+        <option value="medio">Médio</option>
+        <option value="grande">Grande</option>
+      </select>
+      <textarea name="descricao" placeholder="História, comportamento, necessidades especiais..."></textarea>
+      <input type="url" name="foto_url" placeholder="URL da foto (ex: https://example.com/foto.jpg)">
+      <select name="ong_id">
+        <option value="">Selecione sua ONG</option>
+        <!-- Populado via JS -->
+      </select>
+      <input type="text" name="api_key" placeholder="Sua API Key" required value="apikey123">
+      <button type="submit">Cadastrar Animal</button>
+    </form>
+
+    <div id="mensagem-cadastro"></div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Cantinho dos Pets. Todos os direitos reservados.</p>
+  </footer>
+  <script src="./js/main.js"></script>
+</body>
+</html>
