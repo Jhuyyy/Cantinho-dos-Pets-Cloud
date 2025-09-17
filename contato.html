@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contato - Cantinho dos Pets</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
+  <script src="js/main.js" defer></script>
 </head>
-<body>
+<body class="light">
   <header>
     <div class="logo">Cantinho dos Pets 🐾</div>
     <nav>
@@ -17,16 +17,35 @@
       <a href="cadastro.html">Cadastre um Animal</a>
       <a href="contato.html">Contato</a>
     </nav>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Alternar modo escuro/claro">
+      <span class="theme-icon">☀️</span>
+    </button>
   </header>
 
   <section class="contact-section">
     <h2>Fale Conosco</h2>
     <form id="form-contato">
-      <input type="text" name="nome" placeholder="Seu nome" required>
-      <input type="email" name="email" placeholder="Seu e-mail" required>
-      <input type="text" name="assunto" placeholder="Assunto" required>
-      <textarea name="mensagem" placeholder="Sua mensagem..." rows="5" required></textarea>
-      <button type="submit">Enviar Mensagem</button>
+      <div class="form-group">
+        <label for="nome">Seu nome</label>
+        <input type="text" id="nome" name="nome" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Seu e-mail</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="assunto">Assunto</label>
+        <input type="text" id="assunto" name="assunto" required>
+      </div>
+
+      <div class="form-group">
+        <label for="mensagem">Sua mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+      </div>
+
+      <button type="submit" class="btn-primary">Enviar Mensagem</button>
     </form>
 
     <div class="ong-info">

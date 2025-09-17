@@ -2,7 +2,7 @@
 $host = 'localhost';
 $db   = 'cantinhodospets';
 $user = 'root';
-$pass = 'root'; // Senha vazia — comum em instalações escolares
+$pass = 'root';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$db;charset=utf8", $user, $pass);

@@ -4,11 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cadastrar Animal - Cantinho dos Pets</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
   <script src="js/main.js" defer></script>
 </head>
-<body>
+<body class="light">
   <header>
     <div class="logo">Cantinho dos Pets 🐾</div>
     <nav>
@@ -18,41 +17,76 @@
       <a href="cadastro.html">Cadastre um Animal</a>
       <a href="contato.html">Contato</a>
     </nav>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Alternar modo escuro/claro">
+      <span class="theme-icon">☀️</span>
+    </button>
   </header>
 
   <section class="cadastro-section">
-    <h2>Cadastrar Novo Animal (Acesso restrito a ONGs)</h2>
-    <p>Para cadastrar, use a <strong>API Key padrão</strong>: <code>apikey123</code></p>
+    <h2>Cadastrar Novo Animal</h2>
+    <p>Para cadastrar, use a API Key da ONG: <code>f018d39ee759f809e24aa4d3c4481c49</code></p>
     
     <form id="form-cadastro">
-      <input type="text" name="nome" placeholder="Nome do animal" required>
-      <select name="tipo" required>
-        <option value="">Tipo</option>
-        <option value="cachorro">Cachorro</option>
-        <option value="gato">Gato</option>
-        <option value="outros">Outros</option>
-      </select>
-      <input type="text" name="raca" placeholder="Raça">
-      <input type="number" name="idade" placeholder="Idade em meses">
-      <select name="sexo" required>
-        <option value="">Sexo</option>
-        <option value="macho">Macho</option>
-        <option value="femea">Fêmea</option>
-      </select>
-      <select name="porte" required>
-        <option value="">Porte</option>
-        <option value="pequeno">Pequeno</option>
-        <option value="medio">Médio</option>
-        <option value="grande">Grande</option>
-      </select>
-      <textarea name="descricao" placeholder="História, comportamento, necessidades especiais..."></textarea>
-      <input type="url" name="foto_url" placeholder="URL da foto (ex: https://example.com/foto.jpg)">
-      <select name="ong_id">
-        <option value="">Selecione sua ONG</option>
-        <!-- Populado via JS -->
-      </select>
-      <input type="text" name="api_key" placeholder="Sua API Key" required value="apikey123">
-      <button type="submit">Cadastrar Animal</button>
+      <div class="form-group">
+        <label for="nome">Nome do animal</label>
+        <input type="text" id="nome" name="nome" required>
+      </div>
+
+      <div class="form-group">
+        <label for="tipo">Tipo</label>
+        <select id="tipo" name="tipo" required>
+          <option value="">Selecione...</option>
+          <option value="cachorro">Cachorro</option>
+          <option value="gato">Gato</option>
+          <option value="outros">Outros</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="raca">Raça</label>
+        <input type="text" id="raca" name="raca">
+      </div>
+
+      <div class="form-group">
+        <label for="idade">Idade em meses</label>
+        <input type="number" id="idade" name="idade" required>
+      </div>
+
+      <div class="form-group">
+        <label for="sexo">Sexo</label>
+        <select id="sexo" name="sexo" required>
+          <option value="">Selecione...</option>
+          <option value="macho">Macho</option>
+          <option value="femea">Fêmea</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="porte">Porte</label>
+        <select id="porte" name="porte" required>
+          <option value="">Selecione...</option>
+          <option value="pequeno">Pequeno</option>
+          <option value="medio">Médio</option>
+          <option value="grande">Grande</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="descricao">História, comportamento, necessidades especiais...</label>
+        <textarea id="descricao" name="descricao" rows="4" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="foto_url">URL da foto (ex: https://example.com/foto.jpg)</label>
+        <input type="url" id="foto_url" name="foto_url" required>
+      </div>
+
+      <div class="form-group">
+        <label for="api_key">API Key da ONG</label>
+        <input type="text" id="api_key" name="api_key" placeholder="Ex: f018d39ee759f809e24aa4d3c4481c49" required>
+      </div>
+
+      <button type="submit" class="btn-primary">Cadastrar Animal</button>
     </form>
 
     <div id="mensagem-cadastro"></div>
@@ -61,6 +95,5 @@
   <footer>
     <p>&copy; 2025 Cantinho dos Pets. Todos os direitos reservados.</p>
   </footer>
-  <script src="./js/main.js"></script>
 </body>
 </html>
